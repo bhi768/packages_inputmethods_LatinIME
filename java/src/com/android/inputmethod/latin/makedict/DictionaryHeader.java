@@ -66,19 +66,22 @@ public final class DictionaryHeader {
         final String localeString = dictionaryOptions.mAttributes.get(DICTIONARY_LOCALE_KEY);
         if (null == localeString) {
             throw new UnsupportedFormatException("Cannot create a FileHeader without a locale");
+        } else {
+            mLocaleString = localeString;
         }
         final String versionString = dictionaryOptions.mAttributes.get(DICTIONARY_VERSION_KEY);
         if (null == versionString) {
             throw new UnsupportedFormatException(
                     "Cannot create a FileHeader without a version");
+        } else {
+            mVersionString = versionString;
         }
         final String idString = dictionaryOptions.mAttributes.get(DICTIONARY_ID_KEY);
         if (null == idString) {
             throw new UnsupportedFormatException("Cannot create a FileHeader without an ID");
+        } else {
+            mIdString = idString;
         }
-        mLocaleString = localeString;
-        mVersionString = versionString;
-        mIdString = idString;
     }
 
     // Helper method to get the description
